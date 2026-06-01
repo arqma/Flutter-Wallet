@@ -33,6 +33,7 @@ Desktop and mobile bundles for tag **5.1.1**. Wallet FFI **[1.0.10](https://gith
 - **Build 26:** FFI **1.0.8** rescan progress UI.
 - **Build 27:** Live Activity extension enabled (App Group + `com.arqma.arqmaWalletMobile.RescanLiveActivity`); FFI **1.0.9** sync/rescan progress; installable on device and TestFlight.
 - **Build 28:** Background sync while screen locked; inactivity logout does not fire during lock/rescan; rescan progress no longer resets when opening from Live Activity.
+- **Build 31:** Smoother tab switching (IndexedStack + GoRouter refresh listener); fewer periodic UI rebuilds in footer and transaction list; Android parity.
 - **Build 29:** Native wallet FFI **1.0.10** (rescan poller + `getheight` during background jobs).
 
 ### Desktop Flutter (5.1.1+3, release tag rebuild with FFI 1.0.10)
