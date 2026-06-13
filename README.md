@@ -2,7 +2,6 @@
 
 Public distribution of **Arqma Wallet** desktop and mobile builds for version **5.1.2**.
 
-- **Source code:** [ArqTras/Arqma-GUI-MM](https://github.com/ArqTras/Arqma-GUI-MM)
 - **Wallet FFI:** [ArqTras/FFI](https://github.com/ArqTras/FFI/releases)
 - **License:** [MIT](LICENSE)
 
