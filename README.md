@@ -14,11 +14,19 @@ Installers and packages are attached to the [5.1.2 release](https://github.com/a
 |----------|--------|
 | **Windows** | `Arqma-Wallet-Flutter-5.1.2-windows-x64.zip`, `Arqma-Wallet-Flutter-5.1.2-windows-x64-Setup.exe` |
 | **Linux** | `Arqma-Wallet-Flutter-5.1.2-linux-x64.tar.gz`, `Arqma-Wallet-Flutter-5.1.2-x86_64.AppImage` |
-| **macOS** | `Arqma-Wallet-Flutter-5.1.2-macos.zip`, `Arqma-Wallet-Flutter-5.1.2-macos.dmg` |
+| **macOS (signed)** | `Arqma-Wallet-Flutter-5.1.2-macos-signed.zip`, `Arqma-Wallet-Flutter-5.1.2-macos-signed.dmg` — **Developer ID** signed + **notarized** (preferred) |
+| **macOS (unsigned)** | `Arqma-Wallet-Flutter-5.1.2-macos-unsigned.zip`, `Arqma-Wallet-Flutter-5.1.2-macos-unsigned.dmg` — CI adhoc only (when present) |
 | **Android** | `Arqma-Wallet-Android-5.1.2.apk`, `Arqma-Wallet-Android-5.1.2.aab` |
 | **iOS** | `Arqma-Wallet-Mobile-5.1.2-ios-testflight.ipa` (TestFlight / registered devices) |
 
 Checksum files: `SHA256SUMS-android-5.1.2.txt`, `SHA256SUMS-ios.txt` (when present).
+
+### macOS — signed vs unsigned
+
+- **Signed** (`…-macos-signed.*`): **Developer ID** signed and **notarized** by the ArqTras release maintainer. Preferred for end users; Gatekeeper should accept without extra steps.
+- **Unsigned** (`…-macos-unsigned.*`): **GitHub Actions CI** builds with adhoc signature only (not Developer ID). For developers or local re-signing.
+
+If macOS still blocks launch, remove quarantine: `xattr -cr "/Applications/Arqma-Wallet.app"`.
 
 ## Privacy & App Store
 
