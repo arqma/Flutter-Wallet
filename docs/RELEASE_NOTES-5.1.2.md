@@ -1,6 +1,13 @@
 ## Arqma Wallet 5.1.2
 
-Desktop and mobile bundles for tag **5.1.2**. Wallet FFI **[1.0.15](https://github.com/ArqTras/FFI/releases/tag/1.0.15)** (sync near tip, solo pool sidecar lifecycle + rewards). Desktop bundles rebuilt from this tag.
+Desktop and mobile bundles for tag **5.1.2**. Wallet FFI **[1.0.15](https://github.com/ArqTras/FFI/releases/tag/1.0.15)** (sync near tip, solo pool sidecar lifecycle + rewards).
+
+### Release refresh (2026-07-01)
+
+- **iOS / TestFlight:** **5.1.2+96** — rebuilt from `main` (`d6eebf0`+): faster wallet refresh at chain tip, locale parity (UA/ZH/JA), **Erase all local wallet data** in Settings, dynamic app version + FFI stamp, CI `flutter-test` / `ios-build`. Universal **iPhone + iPad**, iOS **13.0+** (arm64). Assets: `Arqma-Wallet-Mobile-5.1.2-ios-testflight.ipa`, manifest, xcarchive zip, `SHA256SUMS-ios.txt`.
+- **Desktop Flutter:** **5.1.2+10** — locale mapping fix, erase local data UI, solo pool tab hidden in release builds, Windows uninstall paths documented, desktop `integration_test` stub smoke.
+- **Android:** **5.1.2+95** — mirror of mobile bridge fixes (erase data, `app_version_str`, locale keys); package name `arqma_wallet_android`.
+- **CI:** `.github/workflows/flutter-test.yml`, locale key verify/sync scripts, iOS compile check workflow.
 
 ### Release refresh (2026-06-13)
 
@@ -13,12 +20,12 @@ Desktop and mobile bundles for tag **5.1.2**. Wallet FFI **[1.0.15](https://gith
 - **Solo pool (desktop):** Fixed `submit_block` — Stratum miner nonce in the **block-header nonce field** (not `reserved_offset`). Block reward stored from template/`get_block`; `solo_pool_block_found` triggers transaction refresh; desktop notifications on accept/reject. Sidecar stops on wallet close and app exit (fixes orphaned `arqma_flutter_solo_pool` on Linux).
 - **Wallet sync (desktop + mobile + Android):** FFI **1.0.15** — `TIP_BAND` 1 block; footer scan progress uses 1-block tip tolerance; refresh when sync stalls near tip; transaction history refreshes on balance change during catch-up.
 - **Desktop Flutter:** **5.1.2+6** — republished with FFI **1.0.15** and updated solo pool sidecar.
-- **iOS / mobile:** **5.1.2+55** (TestFlight) — locale switching fix (UA/ZH/JA), wallet names with spaces, iOS sync resume after background (Face ID + password dialog), store-before-reopen for wallet safety, full locale strings, brighter sync progress text. FFI **1.0.15**, no solo pool on mobile.
+- **iOS / mobile:** **5.1.2+96** (TestFlight) — see **Release refresh (2026-07-01)** above. FFI **1.0.15**, no solo pool on mobile.
 - **Android:** **5.1.2+15** — sideload APK/AAB from this release; requires FFI **1.0.15** Android prebuilts (June 2026 republish).
 
-### TestFlight — What to Test (5.1.2 build 55)
+### TestFlight — What to Test (5.1.2 build 96)
 
-Paste into App Store Connect → TestFlight → build **5.1.2 (55)** → **What to Test**.
+Paste into App Store Connect → TestFlight → build **5.1.2 (96)** → **What to Test**.
 
 **Language switching**
 • Switch to Ukrainian, Chinese, or Japanese from the footer (tap the language label).
